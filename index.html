@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BrickTech Service</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+            colors: {
+              brick: {
+                dark: "#0c0e12",
+                light: "#1a1c21",
+                neon: "#4ade80",
+                soft: "#d1d5db",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      #menu-toggle {
+        display: none;
+      }
+      #mobile-menu {
+        display: none;
+      }
+      #menu-toggle:checked ~ #mobile-menu {
+        display: block;
+      }
+      #menu-toggle:checked + label i:before {
+        content: "\f00d";
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-sans antialiased bg-brick-dark text-brick-soft overflow-x-hidden"
+  >
+    <header
+      class="w-full fixed top-0 left-0 bg-brick-light/80 backdrop-blur-md z-50 border-b border-white/10"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative"
+      >
+        <div class="text-2xl font-semibold text-white">BrickTech Service</div>
+
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+        <label
+          for="menu-toggle"
+          class="md:hidden text-brick-soft hover:text-brick-neon text-xl cursor-pointer"
+        >
+          <i class="fas fa-bars"></i>
+        </label>
+
+        <nav class="hidden md:flex gap-8 text-sm font-medium text-brick-soft">
+          <a href="#home" class="hover:text-brick-neon transition">Beranda</a>
+          <a href="about.html" class="hover:text-brick-neon transition"
+            >Tentang</a
+          >
+          <a href="services.html" class="hover:text-brick-neon transition"
+            >Layanan</a
+          >
+          <a href="contact.html" class="hover:text-brick-neon transition"
+            >Kontak</a
+          >
+        </nav>
+
+        <div
+          id="mobile-menu"
+          class="absolute top-full left-0 w-full bg-brick-light/95 backdrop-blur-md border-b border-white/10 text-center py-6 space-y-4 z-40 md:hidden peer-checked:block"
+        >
+          <a
+            href="#home"
+            class="block text-brick-soft hover:text-brick-neon transition text-lg font-medium"
+            >Beranda</a
+          >
+          <a
+            href="about.html"
+            class="block text-brick-soft hover:text-brick-neon transition text-lg font-medium"
+            >Tentang</a
+          >
+          <a
+            href="services.html"
+            class="block text-brick-soft hover:text-brick-neon transition text-lg font-medium"
+            >Layanan</a
+          >
+          <a
+            href="contact.html"
+            class="block text-brick-soft hover:text-brick-neon transition text-lg font-medium"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <section
+      id="home"
+      class="w-full h-[90vh] flex items-center bg-cover bg-center mt-0"
+      style="background-image: url('img/bg-hero.jpg')"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <h1
+          class="text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-xl"
+        >
+          Perbaikan Laptop Profesional & Terpercaya
+        </h1>
+        <p class="text-white/90 mt-4 text-lg max-w-xl">
+          BrickTech Service menyediakan layanan servis laptop segala kerusakan
+          dari perbaikan hardware, instalasi software, upgrade perangkat, hingga
+          maintenance rutin dengan standar profesional.
+        </p>
+        <a
+          href="services.html"
+          class="inline-block mt-6 bg-brick-neon text-brick-dark font-medium px-6 py-3 rounded-md hover:opacity-90 transition"
+        >
+          Lihat Layanan
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-semibold text-white mb-4">
+            Tentang BrickTech Service
+          </h2>
+          <p class="leading-relaxed text-brick-soft/90">
+            BrickTech Service berdiri sebagai pusat layanan perbaikan laptop
+            yang mengutamakan kualitas, ketelitian, dan ketepatan diagnosa. Kami
+            menangani berbagai brand laptop seperti ASUS, Lenovo, Acer, HP,
+            Dell, MSI, dan lainnya.
+          </p>
+          <p class="mt-4 leading-relaxed text-brick-soft/90">
+            Dengan teknisi berpengalaman dan peralatan modern, kami memastikan
+            setiap perangkat ditangani dengan standar layanan profesional—baik
+            untuk penggunaan personal, bisnis, maupun corporate.
+          </p>
+          <p class="mt-4 leading-relaxed text-brick-soft/90">
+            Kami percaya bahwa laptop bukan hanya perangkat kerja, tetapi aset
+            penting yang harus dijaga performanya. Karena itu, kami menghadirkan
+            layanan cepat, transparan, dan terpercaya.
+          </p>
+        </div>
+
+        <img
+          src="img/about-home.jpg"
+          class="rounded-lg shadow-lg w-full object-cover"
+        />
+      </div>
+    </section>
+
+    <section
+      id="services"
+      class="bg-brick-light py-20 border-y border-white/10"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-center text-white mb-12">
+          Layanan Perbaikan Laptop
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-brick-dark p-6 rounded-lg shadow hover:shadow-xl transition border border-white/5"
+          >
+            <h3 class="text-xl font-semibold mb-3 text-brick-neon">
+              Perbaikan Hardware
+            </h3>
+            <p class="text-brick-soft/90 leading-relaxed">
+              Perbaikan mainboard, keyboard, baterai, layar pecah, port rusak,
+              fan mati, overheat, dan kerusakan fisik lainnya.
+            </p>
+          </div>
+
+          <div
+            class="bg-brick-dark p-6 rounded-lg shadow hover:shadow-xl transition border border-white/5"
+          >
+            <h3 class="text-xl font-semibold mb-3 text-brick-neon">
+              Instalasi & Pengaturan Software
+            </h3>
+            <p class="text-brick-soft/90 leading-relaxed">
+              Instal ulang Windows, aktivasi, antivirus, aplikasi kerja,
+              recovery data, hingga optimalisasi performa.
+            </p>
+          </div>
+
+          <div
+            class="bg-brick-dark p-6 rounded-lg shadow hover:shadow-xl transition border border-white/5"
+          >
+            <h3 class="text-xl font-semibold mb-3 text-brick-neon">
+              Upgrade Laptop
+            </h3>
+            <p class="text-brick-soft/90 leading-relaxed">
+              Upgrade SSD, RAM, thermal paste, hingga perawatan komponen untuk
+              meningkatkan performa laptop Anda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-3xl font-semibold text-white mb-6">Hubungi Kami</h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <p class="text-brick-soft/90 leading-relaxed mb-4">
+            Siap membantu setiap permasalahan laptop anda. Konsultasi gratis
+            sebelum perbaikan.
+          </p>
+          <p class="flex items-center mb-2">
+            <i class="fas fa-map-marker-alt mr-3 text-brick-neon"></i>Jakarta,
+            Indonesia
+          </p>
+          <p class="flex items-center mb-2">
+            <i class="fas fa-phone mr-3 text-brick-neon"></i>+6285959471730
+          </p>
+          <p class="flex items-center">
+            <i class="fas fa-envelope mr-3 text-brick-neon"></i
+            >support@bricktechservice.com
+          </p>
+        </div>
+
+        <form class="grid gap-4">
+          <input
+            class="bg-brick-light border border-white/10 rounded-md p-3 text-white focus:outline-none"
+            placeholder="Nama"
+          />
+          <input
+            class="bg-brick-light border border-white/10 rounded-md p-3 text-white focus:outline-none"
+            placeholder="Email"
+          />
+          <textarea
+            class="bg-brick-light border border-white/10 rounded-md p-3 h-32 text-white focus:outline-none"
+            placeholder="Pesan"
+          ></textarea>
+          <button
+            class="bg-brick-neon text-brick-dark px-6 py-3 rounded-md font-medium hover:opacity-90 transition"
+          >
+            Kirim Pesan
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer
+      class="text-center text-sm text-brick-soft/60 py-6 border-t border-white/10"
+    >
+      © 2025 BrickTech Service. All rights reserved.
+    </footer>
+  </body>
+</html>

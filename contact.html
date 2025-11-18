@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - BrickTech Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brick: {
+                dark: "#0c0e12",
+                light: "#1a1c21",
+                neon: "#4ade80",
+                soft: "#d1d5db",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      #menu-toggle {
+        display: none;
+      }
+      #mobile-menu {
+        display: none;
+      }
+      #menu-toggle:checked ~ #mobile-menu {
+        display: block;
+      }
+      #menu-toggle:checked + label i:before {
+        content: "\f00d";
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-brick-dark text-brick-soft">
+    <header
+      class="w-full bg-brick-light/80 shadow-sm fixed top-0 left-0 z-50 border-b border-white/10"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative"
+      >
+        <div class="text-2xl font-semibold text-white">BrickTech Service</div>
+
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+        <label
+          for="menu-toggle"
+          class="md:hidden text-brick-soft hover:text-brick-neon text-xl cursor-pointer"
+        >
+          <i class="fas fa-bars"></i>
+        </label>
+
+        <nav class="hidden md:flex gap-8 text-sm font-medium text-brick-soft">
+          <a href="index.html" class="hover:text-brick-neon transition"
+            >Beranda</a
+          >
+          <a href="about.html" class="hover:text-brick-neon transition"
+            >Tentang</a
+          >
+          <a href="services.html" class="hover:text-brick-neon transition"
+            >Layanan</a
+          >
+          <a href="contact.html" class="hover:text-brick-neon transition"
+            >Kontak</a
+          >
+        </nav>
+
+        <div
+          id="mobile-menu"
+          class="absolute top-full left-0 w-full bg-brick-light/95 backdrop-blur-md border-b border-white/10 text-center py-6 space-y-4 z-40 md:hidden peer-checked:block"
+        >
+          <a
+            href="index.html"
+            class="block text-brick-soft hover:text-brick-neon transition text-lg font-medium"
+            >Beranda</a
+          >
+          <a
+            href="about.html"
+            class="block text-brick-soft hover:text-brick-neon transition text-lg font-medium"
+            >Tentang</a
+          >
+          <a
+            href="services.html"
+            class="block text-brick-soft hover:text-brick-neon transition text-lg font-medium"
+            >Layanan</a
+          >
+          <a
+            href="contact.html"
+            class="block text-brick-soft hover:text-brick-neon transition text-lg font-medium"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 py-24 mt-10">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-semibold mb-4 text-white">
+          Hubungi Kami untuk Perbaikan Laptop
+        </h2>
+        <p class="text-lg text-brick-soft/90">
+          Butuh bantuan cepat untuk laptop Anda? Kirim pesan atau telepon
+          sekarang!
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 mb-12">
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-brick-neon">
+            Informasi Kontak
+          </h3>
+          <div class="flex items-start">
+            <i
+              class="fas fa-map-marker-alt w-5 h-5 text-brick-neon mt-1 mr-3"
+            ></i>
+            <div>
+              <p class="font-medium text-white">Alamat</p>
+              <p class="text-brick-soft/90">
+                Jl. Cipayung No. 60, Jakarta Timur, Indonesia
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-phone w-5 h-5 text-brick-neon mt-1 mr-3"></i>
+            <div>
+              <p class="font-medium text-white">Telepon</p>
+              <p class="text-brick-soft/90">+625959471730</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-envelope w-5 h-5 text-brick-neon mt-1 mr-3"></i>
+            <div>
+              <p class="font-medium text-white">Email</p>
+              <p class="text-brick-soft/90">support@bricktechservice.com</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-clock w-5 h-5 text-brick-neon mt-1 mr-3"></i>
+            <div>
+              <p class="font-medium text-white">Jam Kerja</p>
+              <p class="text-brick-soft/90">Senin - Jumat: 09:00 - 18:00 WIB</p>
+            </div>
+          </div>
+        </div>
+
+        <form
+          class="space-y-4 bg-brick-light p-6 rounded-lg border border-white/10"
+        >
+          <div>
+            <label class="block text-sm font-medium text-white mb-1"
+              >Nama</label
+            >
+            <input
+              type="text"
+              class="w-full bg-brick-dark border border-white/10 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-brick-neon"
+              placeholder="Nama lengkap Anda"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white mb-1"
+              >Email</label
+            >
+            <input
+              type="email"
+              class="w-full bg-brick-dark border border-white/10 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-brick-neon"
+              placeholder="Email Anda"
+              required
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white mb-1"
+              >Subjek</label
+            >
+            <input
+              type="text"
+              class="w-full bg-brick-dark border border-white/10 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-brick-neon"
+              placeholder="Masalah laptop (misal: layar mati)"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white mb-1"
+              >Pesan</label
+            >
+            <textarea
+              class="w-full bg-brick-dark border border-white/10 rounded-md p-3 h-24 text-white focus:outline-none focus:ring-2 focus:ring-brick-neon"
+              placeholder="Deskripsikan masalah laptop Anda..."
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-brick-neon text-brick-dark py-3 rounded-md hover:opacity-90 transition-colors font-medium"
+          >
+            Kirim Pesan
+          </button>
+        </form>
+      </div>
+
+      <section class="mb-12">
+        <h3 class="text-xl font-semibold mb-4 text-center text-white">
+          Lokasi Workshop Kami
+        </h3>
+        <div class="relative h-64 bg-gray-200 rounded-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63448.20150646263!2d106.86186805141281!3d-6.327557377378103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed2fd3e7960d%3A0x452fb53366a5728d!2sKec.%20Cipayung%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1763492008277!5m2!1sid!2sid"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <div class="text-center">
+        <p class="text-brick-soft/90 mb-4">
+          Atau hubungi langsung via WhatsApp untuk diagnosis cepat:
+          <a
+            href="https://wa.me/6285959471730"
+            class="text-brick-neon hover:underline"
+            >+6285959471730</a
+          >
+        </p>
+        <a
+          href="#"
+          class="bg-brick-neon text-brick-dark px-8 py-3 rounded-lg hover:opacity-90 transition-colors inline-block font-medium"
+        >
+          Jadwalkan Perbaikan Gratis
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
