@@ -40,6 +40,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
     <style>
       #menu-toggle {
         display: none;
@@ -52,6 +53,10 @@
       }
       #menu-toggle:checked + label i:before {
         content: "\f00d";
+      }
+
+      .hero-shadow {
+        filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.5));
       }
     </style>
   </head>
@@ -78,7 +83,10 @@
 
         <nav class="hidden md:flex gap-8 text-sm font-medium text-brick-soft">
           <a href="#home" class="hover:text-brick-neon transition">Beranda</a>
-          <a href="about.html" class="hover:text-brick-neon transition"
+          <a
+            href="about.html"
+            class="hover:text-brick-neon transition"
+            target="_blank"
             >Tentang</a
           >
           <a href="services.html" class="hover:text-brick-neon transition"
@@ -124,14 +132,15 @@
     >
       <div class="max-w-6xl mx-auto px-6">
         <h1
-          class="text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-xl"
+          class="text-4xl md:text-6xl font-bold text-white leading-tight hero-shadow"
         >
           Perbaikan Laptop Profesional & Terpercaya
         </h1>
         <p class="text-white/90 mt-4 text-lg max-w-xl">
-          BrickTech Service menyediakan layanan servis laptop segala kerusakan
-          dari perbaikan hardware, instalasi software, upgrade perangkat, hingga
-          maintenance rutin dengan standar profesional.
+          BrickTech Service siap bantu servis laptop kamu dari segala macam
+          kerusakan—mulai hardware rusak sampe software bandel. Kami handle
+          instal ulang, upgrade, dan maintenance rutin dengan standar pro, biar
+          laptop kamu awet dan ngebut lagi.
         </p>
         <a
           href="services.html"
@@ -142,33 +151,34 @@
       </div>
     </section>
 
-    <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+    <section id="about" class="max-w-6xl mx-auto px-6 py-16">
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h2 class="text-3xl font-semibold text-white mb-4">
             Tentang BrickTech Service
           </h2>
           <p class="leading-relaxed text-brick-soft/90">
-            BrickTech Service berdiri sebagai pusat layanan perbaikan laptop
-            yang mengutamakan kualitas, ketelitian, dan ketepatan diagnosa. Kami
-            menangani berbagai brand laptop seperti ASUS, Lenovo, Acer, HP,
-            Dell, MSI, dan lainnya.
+            Kami tim kecil tapi tangguh di pusat servis laptop Jakarta, fokus
+            banget ke kualitas dan diagnosa cepat. Dari ASUS sampe MSI, semua
+            brand kami tangani dengan hati-hati.
           </p>
           <p class="mt-4 leading-relaxed text-brick-soft/90">
-            Dengan teknisi berpengalaman dan peralatan modern, kami memastikan
-            setiap perangkat ditangani dengan standar layanan profesional—baik
-            untuk penggunaan personal, bisnis, maupun corporate.
+            Teknisi kami udah berpengalaman bertahun-tahun, pakai tools modern
+            biar tiap perbaikan aman dan efisien—cocok buat personal, kantor,
+            atau perusahaan besar.
           </p>
-          <p class="mt-4 leading-relaxed text-brick-soft/90">
-            Kami percaya bahwa laptop bukan hanya perangkat kerja, tetapi aset
-            penting yang harus dijaga performanya. Karena itu, kami menghadirkan
-            layanan cepat, transparan, dan terpercaya.
+          <p class="mt-4 leading-relaxed text-brick-soft/90 mb-0">
+            Laptop itu aset berharga, kan? Makanya kami kasih layanan
+            transparan, cepat, dan bisa diandalkan. Yuk, coba konsultasi gratis
+            dulu!
           </p>
         </div>
 
         <img
           src="img/about-home.jpg"
           class="rounded-lg shadow-lg w-full object-cover"
+          alt="Tim BrickTech di workshop"
+          aria-label="Foto tim kami"
         />
       </div>
     </section>
@@ -190,8 +200,9 @@
               Perbaikan Hardware
             </h3>
             <p class="text-brick-soft/90 leading-relaxed">
-              Perbaikan mainboard, keyboard, baterai, layar pecah, port rusak,
-              fan mati, overheat, dan kerusakan fisik lainnya.
+              Fix mainboard, keyboard bermasalah, baterai drop, layar retak,
+              port USB mati, fan berisik, overheat parah, plus kerusakan fisik
+              lainnya yang bikin pusing.
             </p>
           </div>
 
@@ -202,8 +213,9 @@
               Instalasi & Pengaturan Software
             </h3>
             <p class="text-brick-soft/90 leading-relaxed">
-              Instal ulang Windows, aktivasi, antivirus, aplikasi kerja,
-              recovery data, hingga optimalisasi performa.
+              Install fresh Windows, aktivasi license, pasang antivirus aman,
+              setup app kerja, pulihkan data hilang, sampe tweak performa biar
+              lancar jaya.
             </p>
           </div>
 
@@ -214,22 +226,23 @@
               Upgrade Laptop
             </h3>
             <p class="text-brick-soft/90 leading-relaxed">
-              Upgrade SSD, RAM, thermal paste, hingga perawatan komponen untuk
-              meningkatkan performa laptop Anda.
+              Naikin SSD cepet, tambah RAM gede, ganti thermal paste panas, plus
+              clean komponen biar laptop kamu kinclong dan performa naik level.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="max-w-6xl mx-auto px-6 py-20">
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-20 py-24">
       <h2 class="text-3xl font-semibold text-white mb-6">Hubungi Kami</h2>
 
       <div class="grid md:grid-cols-2 gap-10">
         <div>
           <p class="text-brick-soft/90 leading-relaxed mb-4">
-            Siap membantu setiap permasalahan laptop anda. Konsultasi gratis
-            sebelum perbaikan.
+            Kami siap bantu atasi masalah laptop kamu secepatnya. Konsultasi
+            gratis dulu yuk, sebelum langsung servis—nggak ada biaya
+            tersembunyi.
           </p>
           <p class="flex items-center mb-2">
             <i class="fas fa-map-marker-alt mr-3 text-brick-neon"></i>Jakarta,
@@ -244,18 +257,22 @@
           </p>
         </div>
 
-        <form class="grid gap-4">
+        <form
+          class="grid gap-4"
+          action="mailto:support@bricktechservice.com"
+          method="post"
+        >
           <input
             class="bg-brick-light border border-white/10 rounded-md p-3 text-white focus:outline-none"
-            placeholder="Nama"
+            placeholder="Nama Lengkap"
           />
           <input
             class="bg-brick-light border border-white/10 rounded-md p-3 text-white focus:outline-none"
-            placeholder="Email"
+            placeholder="Email Kamu"
           />
           <textarea
             class="bg-brick-light border border-white/10 rounded-md p-3 h-32 text-white focus:outline-none"
-            placeholder="Pesan"
+            placeholder="Ceritain masalah laptopmu disini..."
           ></textarea>
           <button
             class="bg-brick-neon text-brick-dark px-6 py-3 rounded-md font-medium hover:opacity-90 transition"
@@ -269,7 +286,7 @@
     <footer
       class="text-center text-sm text-brick-soft/60 py-6 border-t border-white/10"
     >
-      © 2025 BrickTech Service. All rights reserved.
+      ©2025 BrickTech Service. All rights reserved.
     </footer>
   </body>
 </html>
